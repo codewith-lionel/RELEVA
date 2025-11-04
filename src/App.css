@@ -1,0 +1,486 @@
+ .logo-link {
+  display: flex;
+  align-items: center;
+  z-index: 10;
+}
+
+.logo-img {
+  height: 60px; /* Adjust this value to make your logo bigger or smaller */
+  width: auto;
+}
+
+
+/* General Styling */
+:root {
+  --primary-color: #28a7a1; /* Teal */
+  --secondary-color: #495057; /* Dark Gray */
+  --dark-color: #343a40; /* Very Dark Gray */
+  --light-color: #f8f9fa; /* Off-white */
+  --white-color: #ffffff;
+  --text-color: #555;
+  --font-family: 'Poppins', sans-serif;
+}
+
+body {
+  font-family: var(--font-family);
+  color: var(--text-color);
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: var(--white-color);
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 0 2rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--dark-color);
+  font-weight: 600;
+  margin-top: 0;
+}
+
+.section-padding {
+  padding: 60px 0;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.section-subtitle {
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto 3rem auto;
+    color: #6c757d;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 28px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: none;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  border: 2px solid var(--primary-color);
+}
+
+.btn-primary:hover {
+  background-color: #23908a;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+}
+
+.btn-secondary:hover {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+}
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+.rounded {
+    border-radius: 12px;
+}
+
+.bg-light {
+    background-color: var(--light-color);
+}
+
+.card {
+    background: var(--white-color);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.flex-container {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.flex-item-40 { flex: 40%; }
+.flex-item-50 { flex: 50%; }
+.flex-item-60 { flex: 60%; }
+
+.img-placeholder {
+    background-color: #e9ecef;
+    border-radius: 12px;
+    width: 100%;
+}
+
+
+/* Header */
+.header {
+  background: var(--white-color);
+  padding: 1rem 0;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header .logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--dark-color);
+  z-index: 10;
+}
+
+.header nav {
+  display: flex;
+  align-items: center;
+}
+
+.header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.header nav a {
+  text-decoration: none;
+  color: var(--secondary-color);
+  font-weight: 500;
+  padding-bottom: 5px;
+  border-bottom: 2px solid transparent;
+}
+
+.header nav a:hover, .header nav a.active {
+  color: var(--primary-color);
+  border-bottom-color: var(--primary-color);
+}
+
+.header .btn-book-appointment {
+    margin-left: 2rem;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.hamburger .line {
+    width: 25px;
+    height: 3px;
+    background-color: var(--dark-color);
+    margin: 5px 0;
+    transition: all 0.3s ease;
+}
+
+/* Hero Section */
+.hero-section {
+  background: linear-gradient(to right, #43c6ac, #19a29d);
+  color: var(--white-color);
+  padding: 100px 0;
+}
+
+.hero-content {
+    background-color: rgba(255, 255, 255, 0.15);
+    padding: 3rem;
+    border-radius: 15px;
+    max-width: 700px;
+    margin: auto;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  color: var(--white-color);
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.hero-content .btn-primary {
+    background-color: var(--white-color);
+    color: var(--primary-color);
+    border: none;
+}
+
+/* Services Grids */
+.services-grid, .services-grid-full {
+  display: grid;
+  gap: 2rem;
+}
+
+.services-grid {
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.services-grid-full {
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.service-card, .service-card-large {
+    background: var(--white-color);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    text-align: left;
+}
+
+.service-icon {
+    width: 40px;
+    height: 40px;
+    background-color: #e0f8f7;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+/* About Page */
+.expert-card {
+    background: var(--light-color);
+    padding: 2rem;
+    border-radius: 12px;
+    margin-top: 2rem;
+}
+.expert-card ul {
+    list-style: '✓';
+    padding-left: 1.5rem;
+}
+.expert-card ul li {
+    padding-left: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Contact Page */
+.contact-content {
+    display: flex;
+    gap: 3rem;
+    background: var(--light-color);
+    padding: 3rem;
+    border-radius: 15px;
+    margin-top: 2rem;
+}
+.contact-form-container { flex: 60%; }
+.contact-details-container { flex: 40%; }
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+.form-group label {
+    display: block;
+    margin-bottom: .5rem;
+    font-weight: 600;
+}
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-family: inherit;
+    box-sizing: border-box; /* Added for better box model handling */
+}
+.form-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.btn-whatsapp {
+    background-color: #25D366;
+    color: white;
+}
+.btn-whatsapp:hover {
+    background-color: #1EBE57;
+}
+
+.contact-detail-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+/* Footer */
+.footer {
+  background-color: var(--dark-color);
+  color: #ccc;
+  padding: 4rem 0 2rem;
+}
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #495057;
+}
+.footer-section {
+  flex: 1;
+}
+.footer h4 {
+  color: var(--white-color);
+}
+.footer a {
+  color: #ccc;
+  text-decoration: none;
+}
+.social-icons a {
+  margin-right: 1rem;
+  font-size: 1.2rem;
+}
+.footer-bottom {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+}
+
+/* ################################### */
+/* ####### MEDIA QUERIES ############# */
+/* ################################### */
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1rem;
+  }
+
+  /* Responsive Header */
+  .hamburger {
+      display: block;
+  }
+
+  .header nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--white-color);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .header nav.active {
+      transform: translateX(0);
+  }
+
+  .header nav ul {
+    flex-direction: column;
+    text-align: center;
+    gap: 3rem;
+  }
+
+  .header nav ul a {
+      font-size: 1.5rem;
+  }
+
+  .header .btn-book-appointment {
+      display: none; /* Hide button on mobile nav, can be added inside the nav if needed */
+  }
+ 
+
+  /* General Layout */
+  .section-padding {
+    padding: 40px 0;
+  }
+  .section-title {
+      font-size: 2rem;
+  }
+  .flex-container {
+      flex-direction: column;
+  }
+
+  /* Hero */
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+
+  /* Services Grid */
+  .services-grid, .services-grid-full {
+      grid-template-columns: 1fr;
+  }
+  
+  /* Contact Page */
+  .contact-content {
+      flex-direction: column;
+      padding: 2rem 1rem;
+  }
+  .form-buttons {
+      flex-direction: row;
+  }
+
+  /* Footer */
+  .footer-content {
+      flex-direction: column;
+      text-align: center;
+  }
+}
+/* ... (all your existing styles) ... */
+
+/* --- ADD THESE NEW STYLES for the simplified contact page --- */
+
+.contact-action-container {
+    flex: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contact-action-container p {
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+    color: #6c757d;
+}
+
+.btn-large {
+    padding: 15px 35px;
+    font-size: 1.1rem;
+    align-self: flex-start; /* Align button to the left */
+}
+
+
+/* ################################### */
+/* ####### MEDIA QUERIES ############# */
+/* ################################### */
+
+@media (max-width: 768px) {
+  /* ... (all your existing media query styles) ... */
+  
+  /* Add this inside the media query block */
+  .contact-action-container {
+      text-align: center;
+  }
+  .btn-large {
+      align-self: center; /* Center the button on mobile */
+  }
+}

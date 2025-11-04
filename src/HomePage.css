@@ -1,0 +1,180 @@
+:root {
+  --primary-color: #28a7a1; /* Teal */
+  --light-teal: #5ed3cc;
+  --white: #ffffff;
+  --dark-text: #1e1e1e;
+}
+
+.homepage {
+  font-family: "Poppins", sans-serif;
+  color: var(--dark-text);
+  overflow-x: hidden;
+}
+
+/* --- HERO SECTION --- */
+.hero.teal-theme {
+  position: relative;
+  height: 70vh;
+  background: linear-gradient(135deg, var(--primary-color), var(--light-teal));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--white);
+  overflow: hidden;
+}
+
+.hero.teal-theme::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at 30% 20%,
+    rgba(255, 255, 255, 0.25),
+    transparent 60%
+  );
+  animation: float 8s infinite alternate ease-in-out;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+}
+
+.hero p {
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+  color: #f9f9f9;
+}
+
+.btn-modern {
+  background: var(--white);
+  color: var(--primary-color);
+  padding: 12px 30px;
+  border-radius: 30px;
+  font-weight: 600;
+  transition: 0.3s ease;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+.btn-modern:hover {
+  background: var(--primary-color);
+  color: var(--white);
+}
+
+/* --- WELCOME --- */
+.welcome {
+  padding: 5rem 2rem;
+  background: #f9f9ff;
+}
+
+.welcome-grid {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.welcome-img {
+  width: 350px;
+  height: 400px;
+  background: url("https://images.unsplash.com/photo-1606813902965-22d40ec54c9b")
+    center/cover no-repeat;
+  border-radius: 20px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.welcome-text {
+  max-width: 500px;
+}
+.welcome-text h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+}
+
+/* --- SERVICES (Fluid Cards) --- */
+.services-modern {
+  padding: 6rem 2rem;
+  text-align: center;
+  background: linear-gradient(120deg, #e7fdfb, #f9fefc);
+}
+
+.services-modern h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+}
+
+.fluid-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.fluid-card {
+  width: 300px;
+  padding: 2rem;
+  border-radius: 25px;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  transition: transform 0.4s ease, background 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.fluid-card::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(
+    circle at center,
+    rgba(40, 167, 161, 0.15),
+    transparent 60%
+  );
+  animation: float 6s infinite alternate ease-in-out;
+}
+
+.fluid-card:hover {
+  transform: translateY(-10px);
+  background: rgba(255, 255, 255, 0.95);
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  100% {
+    transform: translateY(-10px) rotate(2deg);
+  }
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 768px) {
+  .welcome-grid {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .fluid-card {
+    width: 90%;
+  }
+
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+}
