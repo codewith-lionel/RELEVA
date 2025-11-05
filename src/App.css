@@ -11,15 +11,39 @@
 
 
 /* General Styling */
+/* General Styling */
 :root {
-  --primary-color: #28a7a1; /* Teal */
-  --secondary-color: #495057; /* Dark Gray */
-  --dark-color: #343a40; /* Very Dark Gray */
-  --light-color: #f8f9fa; /* Off-white */
+  /* --- Default Teal Theme --- */
+  --primary-color: #28a7a1;
+  --secondary-color: #495057;
+  --dark-color: #343a40;
+  --light-color: #f8f9fa;
   --white-color: #ffffff;
   --text-color: #555;
   --font-family: 'Poppins', sans-serif;
 }
+
+/* --- ADD THIS NEW THEME --- */
+/* [data-theme="blue"] {
+  --primary-color: #0077b6; 
+  --secondary-color: #6c757d;
+  --dark-color: #0a2540;     
+  --light-color: #f0f4f8;    
+  --white-color: #ffffff;
+  --text-color: #555;
+} */
+
+/* You could even add a dark theme here later! */
+
+[data-theme="dark"] {
+  --primary-color: #28a7a1;
+  --secondary-color: #adb5bd;
+  --dark-color: #e9ecef;
+  --light-color: #212529;
+  --white-color: #121212;
+  --text-color: #ced4da;
+}
+
 
 body {
   font-family: var(--font-family);
@@ -27,8 +51,12 @@ body {
   line-height: 1.6;
   margin: 0;
   padding: 0;
-  background-color: var(--white-color);
+  /* Use the variable for the background so it can change with the theme */
+  background-color: var(--white-color); 
 }
+
+/* ... rest of your CSS file ... */
+
 
 .container {
   max-width: 1100px;
@@ -361,6 +389,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 2rem;
   font-size: 0.9rem;
 }
+
 
 /* ################################### */
 /* ####### MEDIA QUERIES ############# */

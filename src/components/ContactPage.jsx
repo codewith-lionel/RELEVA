@@ -91,7 +91,7 @@ const ContactPage = () => {
               {/* <FaEnvelope className="contact-icon" /> */}
               <div>
                 <h4>Email</h4>
-                <p>contact@releva.com</p>
+                <p>contactreleva@gmail.com</p>
               </div>
             </div>
           </motion.div>
