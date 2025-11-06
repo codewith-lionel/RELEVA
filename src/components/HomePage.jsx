@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { fadeInUp, staggerContainer, pageAnimation } from "../utils/motion";
+import ancy from "../assets/ancy.jpg";
 import "../HomePage.css";
 
 const HomePage = () => {
@@ -36,7 +37,20 @@ const HomePage = () => {
         viewport={{ once: true, amount: 0.3 }}
       >
         <div className="welcome-grid">
-          <motion.div variants={fadeInUp} className="welcome-img"></motion.div>
+          <motion.div variants={fadeInUp} className="welcome-img">
+            <img
+              src={ancy}
+              alt="Dr. Ancy Anto"
+              className="expert-img"
+              style={{
+                width: "auto",
+                height: "100%",
+                objectFit: "cover",
+                borderRadius: "12px",
+              }}
+            />
+          </motion.div>
+
           <motion.div variants={fadeInUp} className="welcome-text">
             <h2>Welcome from Dr. Ancy Anto</h2>
             <p>

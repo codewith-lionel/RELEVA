@@ -8,6 +8,26 @@
   height: 60px; /* Adjust this value to make your logo bigger or smaller */
   width: auto;
 }
+.approach-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.approach-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.approach-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
 
 
 /* General Styling */
@@ -22,6 +42,55 @@
   --text-color: #555;
   --font-family: 'Poppins', sans-serif;
 }
+/* --- Welcome Section --- */
+.welcome {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 2rem;
+  background: #f9f9f9;
+}
+
+.welcome-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  align-items: center;
+}
+
+.welcome-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.expert-img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 20px;
+  object-fit: cover;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.expert-img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+}
+
+.welcome-text h2 {
+  font-size: 2rem;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.welcome-text p {
+  color: #555;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
 
 /* --- ADD THIS NEW THEME --- */
 /* [data-theme="blue"] {
@@ -156,11 +225,11 @@ h1, h2, h3, h4, h5, h6 {
 .flex-item-50 { flex: 50%; }
 .flex-item-60 { flex: 60%; }
 
-.img-placeholder {
+/* .img-placeholder {
     background-color: #e9ecef;
     border-radius: 12px;
     width: 100%;
-}
+} */
 
 
 /* Header */
@@ -283,13 +352,13 @@ h1, h2, h3, h4, h5, h6 {
     text-align: left;
 }
 
-.service-icon {
+/* .service-icon {
     width: 40px;
     height: 40px;
     background-color: #e0f8f7;
     border-radius: 8px;
     margin-bottom: 1rem;
-}
+} */
 
 /* About Page */
 .expert-card {
@@ -306,6 +375,7 @@ h1, h2, h3, h4, h5, h6 {
     padding-left: 0.5rem;
     margin-bottom: 0.5rem;
 }
+
 
 /* Contact Page */
 .contact-content {

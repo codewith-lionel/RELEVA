@@ -1,38 +1,50 @@
 import React from "react";
 import { motion } from "framer-motion";
-// Uncomment if using icons
-// import { FaRunning, FaUserNurse, FaHeartbeat, FaBrain, FaFemale } from "react-icons/fa";
+import {
+  FaRunning,
+  FaUserNurse,
+  FaHeartbeat,
+  FaBrain,
+  FaChild,
+  FaFemale,
+} from "react-icons/fa";
 
 const services = [
   {
-    title: "Back & Neck Pain Relief",
+    title: "Pain Management & Functional Restoration",
     description:
-      "Specialized treatments to alleviate chronic and acute pain in the back and neck regions.",
-    // icon: <FaHeartbeat />,
+      "Comprehensive pain management programs focusing on restoring movement and improving quality of life.",
+    icon: <FaHeartbeat />,
   },
   {
-    title: "Sports & ACL Rehabilitation",
+    title: "Musculoskeletal Pain Management",
     description:
-      "Customized programs to help athletes recover from injuries and regain peak performance.",
-    // icon: <FaRunning />,
+      "Expert care for neck pain, shoulder pain, ankle pain, knee pain, and low back pain.",
+    icon: <FaRunning />,
   },
   {
-    title: "Post-Operative Therapy",
+    title: "Osteoarthritis & Degenerative Disorders",
     description:
-      "Specialized therapy to restore mobility and strength after surgical procedures.",
-    // icon: <FaUserNurse />,
+      "Specialized physiotherapy for osteoarthritis and other degenerative musculoskeletal conditions.",
+    icon: <FaUserNurse />,
   },
   {
-    title: "Neurological Physiotherapy",
+    title: "Neurological Rehabilitation",
     description:
-      "Targeted physiotherapy for conditions affecting the nervous system, improving function.",
-    // icon: <FaBrain />,
+      "Focused therapy for stroke, spinal cord injuries, parkinsonism, and other movement disorders to improve mobility and function.",
+    icon: <FaBrain />,
   },
   {
-    title: "Women's Health Physiotherapy",
+    title: "Paediatric Physiotherapy",
     description:
-      "Dedicated care for conditions unique to women through all stages of life.",
-    // icon: <FaFemale />,
+      "Customized programs for children with cerebral palsy, autism, torticollis, and developmental delays.",
+    icon: <FaChild />,
+  },
+  {
+    title: "Women’s Health Physiotherapy",
+    description:
+      "Specialized care for pelvic floor rehabilitation, antenatal and postnatal exercise programs, and overall wellness for women.",
+    icon: <FaFemale />,
   },
 ];
 
@@ -68,8 +80,8 @@ const ServicesPage = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          Our mission is to provide personalized care that empowers you on your
-          journey to recovery and peak physical well-being.
+          We provide evidence-based physiotherapy treatments designed to relieve
+          pain, restore function, and improve your overall well-being.
         </motion.p>
 
         <div className="services-grid-full">
@@ -82,7 +94,9 @@ const ServicesPage = () => {
               animate="visible"
               custom={index}
             >
-              <div className="service-icon">{/* {service.icon} */}</div>
+              <div className="service-icon text-primary text-4xl flex justify-center">
+                {service.icon}
+              </div>
               <h4>{service.title}</h4>
               <p>{service.description}</p>
             </motion.div>
